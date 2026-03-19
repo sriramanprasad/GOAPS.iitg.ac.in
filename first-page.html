@@ -12,7 +12,7 @@
       color: #333;
     }
     .header {
-      background-color: #6a1b9a; /* purple */
+      background-color: #6a1b9a;
       color: white;
       padding: 15px 30px;
       text-align: center;
@@ -102,6 +102,11 @@
     .links a:hover {
       text-decoration: underline;
     }
+    .error {
+      color: #d32f2f;
+      text-align: center;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -113,13 +118,12 @@
 
   <div class="container">
     <div class="logo-section">
-      <!-- Replace with actual logo URLs if you have them -->
       <img src="https://via.placeholder.com/120x120?text=GATE" alt="GATE Logo" class="logo">
       <h1>GATE 2026</h1>
       <p>Organizing Institute : INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI</p>
     </div>
 
-    <form>
+    <form id="loginForm">
       <div class="form-group">
         <label for="enroll">Enrolment ID / Email ID</label>
         <input type="text" id="enroll" placeholder="Enter a valid Enrolment ID / Email ID">
@@ -133,16 +137,35 @@
 
       <div class="captcha-section">
         <div class="captcha-box">8 - 5 =</div>
-        <input type="text" class="captcha-input" placeholder="Evaluate the arithmetic expression and enter the answer">
+        <input type="text" class="captcha-input" id="captcha" placeholder="Evaluate the arithmetic expression">
       </div>
 
-      <button type="button" class="btn">LOGIN</button>
+      <button type="submit" class="btn">LOGIN</button>
+      <div id="errorMsg" class="error"></div>
     </form>
 
     <div class="links">
       <a href="#">FORGOT CREDENTIALS?</a>
     </div>
   </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const enroll = document.getElementById('enroll').value.trim();
+      const pass = document.getElementById('pass').value.trim();
+      const captcha = document.getElementById('captcha').value.trim();
+
+      // Very basic check (for demo only)
+      if (enroll === 'G146R17' && pass === 'ramancj@011' && captcha === '3') {
+        window.location.href = 'second.html';
+      } else {
+        document.getElementById('errorMsg').textContent = 
+          'Invalid Enrolment ID, password, or captcha answer (hint: 8-5=3)';
+      }
+    });
+  </script>
 
 </body>
 </html>
