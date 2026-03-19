@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GATE 2026 - Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .header {
+      background-color: #6a1b9a; /* purple */
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .logo-section {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+    h1 {
+      color: #6a1b9a;
+      font-size: 1.6rem;
+      margin: 10px 0;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #444;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+    .captcha-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 25px 0;
+    }
+    .captcha-box {
+      background: #f0e8f5;
+      padding: 12px 20px;
+      border: 1px solid #6a1b9a;
+      border-radius: 6px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      min-width: 100px;
+      text-align: center;
+    }
+    .captcha-input {
+      flex: 1;
+    }
+    .btn {
+      background-color: #6a1b9a;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .btn:hover {
+      background-color: #4a148c;
+    }
+    .links {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .links a {
+      color: #6a1b9a;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    GRADUATE APTITUDE TEST IN ENGINEERING 2026<br>
+    अभियान्त्रिकी स्नातक अभिक्षमता परीक्षा 2026
+  </div>
+
+  <div class="container">
+    <div class="logo-section">
+      <!-- Replace with actual logo URLs if you have them -->
+      <img src="https://via.placeholder.com/120x120?text=GATE" alt="GATE Logo" class="logo">
+      <h1>GATE 2026</h1>
+      <p>Organizing Institute : INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI</p>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label for="enroll">Enrolment ID / Email ID</label>
+        <input type="text" id="enroll" placeholder="Enter a valid Enrolment ID / Email ID">
+        <small>Enter Enrolment ID sent during registration.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" placeholder="Enter your GATE 2026 Application Portal password">
+      </div>
+
+      <div class="captcha-section">
+        <div class="captcha-box">8 - 5 =</div>
+        <input type="text" class="captcha-input" placeholder="Evaluate the arithmetic expression and enter the answer">
+      </div>
+
+      <button type="button" class="btn">LOGIN</button>
+    </form>
+
+    <div class="links">
+      <a href="#">FORGOT CREDENTIALS?</a>
+    </div>
+  </div>
+
+</body>
+</html>
