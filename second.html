@@ -104,8 +104,8 @@
         <div class="status-value">Your GATE 2026 results are available for viewing</div>
       </div>
 
-      <button class="btn">VIEW RESULT (DA)</button>
-      <button class="btn">VIEW RESPONSES (DA)</button>
+      <button class="btn" onclick="downloadFile('GATE-result.pdf')">VIEW RESULT (DA)</button>
+      <button class="btn" onclick="downloadFile('response.pdf')">VIEW RESPONSES (DA)</button>
     </div>
 
     <div class="card">
@@ -113,6 +113,17 @@
       <p>(Content goes here — collapsed by default in original)</p>
     </div>
   </div>
+
+  <script>
+    function downloadFile(filename) {
+      const link = document.createElement('a');
+      link.href = filename;           // relative path — file must be in same folder
+      link.download = filename;       // forces download with this name
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
 
 </body>
 </html>
